@@ -40,12 +40,12 @@ body {
 }
 
 .notifications{
-  background-color: cyan;
+  background-color: #8EDAFC;
   min-height: 70px;
 }
 
 .fa-bell-slash{
-  color: cyan;
+  color: #8EDAFC;
   margin-left: 20px;
   font-size: 20px;
   padding: 10px;
