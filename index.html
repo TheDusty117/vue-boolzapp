@@ -16,7 +16,7 @@
 
 <body>
 
-  <section>
+  <section id="app">
     
     <div class="container pt-3"> <!--container-->
       <div class="row"> <!--riga per dFLEX-->
@@ -71,14 +71,14 @@
           <section class="aside-content">
 
             <!--profilo singolo della persona-->
-            <div class="contact-profile d-flex gap-2">
+            <div v-for="(contact,index) in contacts" class="contact-profile d-flex gap-2">
               
               <div class="profile-img">
                 <img class="round-image" src="./img/img.elon.jpg" alt="">
               </div>
 
               <div class="profile-spec">
-                <h3>Elon</h3>
+                <h3>{{contact.name}}</h3>
                 <p>ultimo messaggio inviato</p>
               </div>
             </div>
@@ -98,6 +98,7 @@
           <!--header-->
           <section class="main-header d-flex justify-content-between align-items-center">
             
+
             <!-----profilo corrente chat -->
             <div class="contact-profile d-flex gap-2 p-0 align-items-center border border-0">
               
@@ -111,6 +112,7 @@
               </div>
             </div>
             <!-----fine profilo corrente chat -->
+
 
             <div class="settings pe-2">
               <button>
