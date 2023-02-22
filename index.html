@@ -74,12 +74,12 @@
             <div v-for="(contact,index) in contacts" class="contact-profile d-flex gap-2">
               
               <div class="profile-img">
-                <img class="round-image" src="./img/img.elon.jpg" alt="">
+                <img class="round-image" :src="contact.avatar" alt="">
               </div>
 
               <div class="profile-spec">
                 <h3>{{contact.name}}</h3>
-                <p>ultimo messaggio inviato</p>
+                <p>{{contact.messages[2].message}}</p> <!--sono risucito ad entrare nell'array!-->
               </div>
             </div>
             <!--fine profilo singolo-->

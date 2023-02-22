@@ -52,7 +52,7 @@ const { createApp } = Vue
           },
           {
             name: 'GigaChad',
-            avatar: './img/img.gigachad',
+            avatar: './img/img.gigachad.jpg',
             visible: true,
             messages: [
               {
