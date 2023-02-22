@@ -17,14 +17,20 @@ body {
 
 /******************************************** STILE DELL'ASIDE *****************************************/
 .aside{
-  min-height: 600px;
+  min-height: 950px;
   padding: 0px;
 }
 
+/********** ASIDE HEADER QUI GIU */
+
 .aside-header{
-  min-height: 60px;
+  min-height: 70px;
   border: 1px solid grey;
   background-color: bisque;
+}
+
+.my-profile>span{
+  font-weight: 700;
 }
 
 .round-image{
@@ -39,6 +45,7 @@ body {
 }
 
 .fa-bell-slash{
+  color: cyan;
   margin-left: 20px;
   font-size: 20px;
   padding: 10px;
@@ -53,18 +60,36 @@ body {
 .notifications>div> p {
   font-size: 13px;
   margin: 0px;
+  color: gray;
+  text-decoration: underline;
 }
 
 .search-bar{
   padding: 5px;
 }
 
+/********** ASIDE CONTENT QUI GIU */
+
+.aside-content{
+  height: auto;
+  overflow-y: scroll;
+}
+
+.contact-profile{
+  padding: 8px 0px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+
+}
+
 .profile-spec>h3{
-  font-size: 20px
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .profile-spec>p{
-  font-size: 12px
+  font-size: 12px;
+  color: gray;
 }
 
 .profile-spec>h3,p{
@@ -76,12 +101,11 @@ body {
 /******************************************** STILE DEL MAIN *****************************************/
 
 .main{
-  min-height: 600px;
   padding: 0px;
 }
 
 .main-header{
-  min-height: 60px;
+  min-height: 70px;
   border: 1px solid grey;
   background-color: bisque;
 }
