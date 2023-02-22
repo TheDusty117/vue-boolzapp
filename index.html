@@ -21,7 +21,7 @@
     <div class="container pt-3"> <!--container-->
       <div class="row"> <!--riga per dFLEX-->
 
-        <!--aside (contacts)-->
+        <!--aside (contacts)----------------------------------------------------------------->
         <div class="col-4 aside bg-white">
 
           <!--header-->
@@ -31,7 +31,7 @@
               <span class="my-name">Gabriele</span>
             </div>
 
-            <div class="settings">
+            <div class="settings pe-2">
               <button>
                 <i class="fa-solid fa-circle-notch"></i>
               </button>
@@ -56,7 +56,7 @@
             </div>
             
             <!--chat search -->
-            <div class="search-bar input-group mb-3">
+            <div class="search-bar input-group my-1">
               <div class="input-group-prepend">
                 <button class="btn btn-outline-secondary" type="button">
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -92,16 +92,61 @@
 
 
 
-        <!--main (chat)-->
+        <!-------------main (chat)------------------------------------------------->
         <div class="col-8 main bg-grey">
+
           <!--header-->
-          <div class="main-header">
+          <section class="main-header d-flex justify-content-between align-items-center">
+            
+            <!-----profilo corrente chat -->
+            <div class="contact-profile d-flex gap-2 p-0 align-items-center border border-0">
+              
+              <div class="profile-img">
+                <img class="round-image" src="./img/img.elon.jpg" alt="">
+              </div>
 
-          </div>
+              <div class="profile-spec">
+                <h3>Elon</h3>
+                <p>Ultimo accesso oggi alle 12:00</p>
+              </div>
+            </div>
+            <!-----fine profilo corrente chat -->
+
+            <div class="settings pe-2">
+              <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-paperclip"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </button>
+            </div>
+          </section>
+
+
           <!--content-->
-          <div class="main-content">
+          <section class="main-content">
+            <div></div>
+          </section>
 
-          </div>
+          <!--footer-->
+          <section class="main-footer">
+            <div class="chat-bar d-flex justify-content-evenly align-items-center">
+              <div>
+                <i class="fa-regular fa-face-smile"></i>
+              </div>
+              <div>
+                <input type="text" class="message-writer form-control" placeholder="Scrivi un messaggio">
+              </div>
+              <div>
+                <i class="fa-solid fa-microphone"></i>
+              </div>
+            </div>
+          </section>
+
+
 
         </div>
 

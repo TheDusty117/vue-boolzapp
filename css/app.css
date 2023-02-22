@@ -98,14 +98,58 @@ body {
 
 
 
-/******************************************** STILE DEL MAIN *****************************************/
+/********************* STILE DEL MAIN *****************************************/
 
 .main{
   padding: 0px;
 }
 
+
+/* HEADER DEL MAIN */
 .main-header{
   min-height: 70px;
   border: 1px solid grey;
   background-color: bisque;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN-CONTENT */
+.main-content{
+  background-image: url(../img/background-whatsapp.jpg);
+  background-size: contain;
+  height: 810px;
+  overflow-y: scroll;
+}
+
+
+
+
+/* MAIN-FOOTER */
+
+.main-footer{
+  background-color: bisque;
+  height: 70px;
+}
+
+.fa-face-smile, .fa-microphone{
+  padding: 25px;
+}
+
+.message-writer{
+  width: 700px;
+}
+
+.message-writer{
+  max-width: 700px;
 }
