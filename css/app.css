@@ -1,0 +1,42 @@
+body {
+  background-color: teal;
+}
+
+.bg-grey{
+  background-color: lightgray;
+}
+
+.container > div{
+  border: 1px solid black;
+}
+
+
+/******************************************** STILE DELL'ASIDE *****************************************/
+.aside{
+  min-height: 600px;
+  padding: 0px;
+}
+
+.aside-header{
+  min-height: 60px;
+  border: 1px solid grey;
+  background-color: bisque;
+}
+
+.my-image{
+  width: 60px;
+  border-radius: 999px;
+}
+
+/******************************************** STILE DEL MAIN *****************************************/
+
+.main{
+  min-height: 600px;
+  padding: 0px;
+}
+
+.main-header{
+  min-height: 60px;
+  border: 1px solid grey;
+  background-color: bisque;
+}
