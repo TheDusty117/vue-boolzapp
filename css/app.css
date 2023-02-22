@@ -1,3 +1,7 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   background-color: teal;
 }
@@ -23,10 +27,51 @@ body {
   background-color: bisque;
 }
 
-.my-image{
+.round-image{
+  padding: 6px;
   width: 60px;
   border-radius: 999px;
 }
+
+.notifications{
+  background-color: cyan;
+  min-height: 70px;
+}
+
+.fa-bell-slash{
+  margin-left: 20px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 999px;
+}
+
+.notifications>div> h3 {
+  font-size: 16px;
+  margin: 0px;
+}
+.notifications>div> p {
+  font-size: 13px;
+  margin: 0px;
+}
+
+.search-bar{
+  padding: 5px;
+}
+
+.profile-spec>h3{
+  font-size: 20px
+}
+
+.profile-spec>p{
+  font-size: 12px
+}
+
+.profile-spec>h3,p{
+  margin: 0;
+}
+
+
 
 /******************************************** STILE DEL MAIN *****************************************/
 

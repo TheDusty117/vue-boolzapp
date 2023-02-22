@@ -7,6 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://kit.fontawesome.com/b3bcdb02ea.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/app.css">
   <title>BOOLZAP</title>
 </head>
@@ -20,20 +23,69 @@
 
         <!--aside (contacts)-->
         <div class="col-4 aside bg-white">
+
           <!--header-->
-          <div class="aside-header">
+          <section class="aside-header d-flex justify-content-between align-items-center">
             <div class="my-profile">
-              <img class="my-image" src="./img/img.me.jpg" alt="">
+              <img class="round-image" src="./img/img.me.jpg" alt="">
               <span class="my-name">Gabriele</span>
             </div>
-            <div class="settings">
-              
-            </div>
-          </div>
-          <!--content-->
-          <div class="aside-content">
 
-          </div>
+            <div class="settings">
+              <button>
+                <i class="fa-solid fa-circle-notch"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-message"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </button>
+            </div>
+          </section>
+
+          <!--navbar -->
+          <section class="aside-navbar">
+
+            <div class="notifications d-flex justify-content-start align-items-center gap-3">
+              <i class="fa-solid fa-bell-slash"></i>
+              <div>
+                <h3>Ricevi notifiche di nuovi messaggi</h3>
+                <p>Attiva notifiche desktop</p>
+              </div>
+            </div>
+            
+            <!--chat search -->
+            <div class="search-bar input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="" aria-describedby="basic-addon1">
+            </div>
+            
+          </section>
+
+          <!--aside content-->
+          <section class="aside-content">
+
+            <!--profilo singolo della persona-->
+            <div class="contact-profile d-flex gap-2">
+              
+              <div class="profile-img">
+                <img class="round-image" src="./img/img.elon.jpg" alt="">
+              </div>
+
+              <div class="profile-spec">
+                <h3>Elon</h3>
+                <p>ultimo messaggio inviato</p>
+              </div>
+            </div>
+            <!--fine profilo singolo-->
+
+          </section>
+
 
         </div>
 
