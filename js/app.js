@@ -18,12 +18,12 @@ const { createApp } = Vue
               },
               {
                 date: '10/01/2020 15:50:00',
-                message: 'Ricordati di stare attento a ChatGpt',
+                message: 'ChatGpt sembra uno scam',
                 status: 'sent'
               },
               {
                 date: '10/01/2020 16:15:22',
-                message: 'Stai tranquillo bro!',
+                message: 'lunga vita Intelligenza Artificale!!!',
                 status: 'received'
               }
             ],
@@ -35,17 +35,17 @@ const { createApp } = Vue
             messages: [
               {
                 date: '20/03/2020 16:30:00',
-                message: 'Yo!, hai visto Jotaro?',
+                message: 'Ciao Dio, hai visto Jotaro?',
                 status: 'sent'
               },
               {
                 date: '20/03/2020 16:30:55',
-                message: 'Hey Dio, stava venendo da te mi pare...',
+                message: 'Nani???',
                 status: 'received'
               },
               {
                 date: '20/03/2020 16:35:00',
-                message: 'Nani? Masaka',
+                message: 'Si parlo proprio di lui!',
                 status: 'sent'
               }
             ],
@@ -57,17 +57,17 @@ const { createApp } = Vue
             messages: [
               {
                 date: '28/03/2020 10:10:40',
-                message: 'Questo esercizio non riesco a farlo!',
+                message: 'Ho imparato JS in due ore',
                 status: 'received'
               },
               {
                 date: '28/03/2020 10:20:10',
-                message: 'Io lo finisco in 2 minuti...',
+                message: 'Io ancora non ci capisco nulla',
                 status: 'sent'
               },
               {
                 date: '28/03/2020 16:15:22',
-                message: 'Ti rispetto.',
+                message: 'Sei Scarso allora.',
                 status: 'received'
               }
             ],
