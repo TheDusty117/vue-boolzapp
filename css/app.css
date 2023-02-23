@@ -81,6 +81,12 @@ body {
   border-bottom: 1px solid lightgray;
 }
 
+.contact-profile2{
+  padding: 8px 0px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
 .contact-profile:hover {
   background-color: rgb(199, 199, 199);
 }
