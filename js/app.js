@@ -13,7 +13,7 @@ const { createApp } = Vue
             messages: [
               {
                 date: '10/01/2020 15:30:55',
-                message: 'Hai visto il mio video sulla Gigafactory?',
+                message: 'come stai Elon?',
                 status: 'sent'
               },
               {
@@ -73,19 +73,22 @@ const { createApp } = Vue
             ],
           },
           
-        ]
+        ],
+
+        currentContact: 0,
+        
 
       }
     },
 
     methods:{
 
-      showChat(){
-        if(this.contacts.visible === true){
-          this.contacts.visible = false
-        } 
-      }
-
+      // showChat(){
+      //   if(this.contact.visible === true){
+      //     this.contact.visible = false
+      //   } 
+      // }
+      
 
 
 
