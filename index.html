@@ -108,7 +108,7 @@
 
               <div class="profile-spec">
                 <h3>{{contacts[currentIndexContact].name}}</h3>
-                <p>Ultimo accesso oggi alle 12:00</p>
+                <p>Ultimo accesso {{contacts[currentIndexContact].messages[2].date}}</p>
               </div>
             </div>
             <!-----fine profilo corrente chat -->
@@ -135,8 +135,10 @@
 
               <ul  class="d-flex flex-column align-items-end p-0">
 
-                <li v-for="element in contacts[currentIndexContact].messages" class="chat-proto sent">
-                  {{element.message}}
+                <li v-for="messages in contacts[currentIndexContact].messages"
+                :class="contacts === messages.status"
+                class="chat-proto">
+                  {{messages.message}}
                   <span class="msg-time">15:30</span>
                 </li>
 
