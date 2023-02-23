@@ -133,7 +133,7 @@
 
             <section class="chat-section mt-5 px-5">
 
-              <ul class="d-flex flex-column align-items-end p-0">
+              <ul v-for="message in contacts[currentContact].messages" class="d-flex flex-column align-items-end p-0">
 
                 <li class="chat-proto sent">
                   {{contacts[currentContact].messages[0].message}}
