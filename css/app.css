@@ -171,12 +171,12 @@ body {
   height: 70px;
 }
 
-.fa-face-smile, .fa-microphone{
-  padding: 25px;
+.chat-bar{
+  height: 100%;
 }
 
 .message-writer{
-  width: 700px;
+  width: 100%;
 }
 
 .message-writer{
