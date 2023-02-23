@@ -79,7 +79,10 @@ body {
   padding: 8px 0px;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
+}
 
+.contact-profile:hover {
+  background-color: rgb(199, 199, 199);
 }
 
 .profile-spec>h3{
@@ -97,7 +100,7 @@ body {
 }
 
 .active{
-  background-color: blue;
+  background-color: rgb(199, 199, 199);
 }
 
 
@@ -151,13 +154,13 @@ body {
 }
 
 /* chat ricevuta */
-.chat-proto.received{
-  background-color: wheat;
+.received{
   margin-right: auto;
+  background-color: wheat;
 }
 
 /* chat inviata */
-.chat-proto.sent{
+.sent{
   background-color: greenyellow;
 }
 

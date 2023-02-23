@@ -73,11 +73,15 @@ const { createApp } = Vue
             ],
           },
           
+          
         ],
 
         currentIndexContact: 0,
         
-        // currentIndexMessages:0,
+        //preso con v-bind nell'input su html
+        inputValue: '',
+
+        
 
       }
     },
@@ -87,10 +91,14 @@ const { createApp } = Vue
       setCurrentContact(current){
         this.currentIndexContact = current
       },
+
+      
      
-      // setCurrentMessage(current){
-      //   this.currentIndexMessages = current
-      // },
+      addChat(){
+        const newChat = this.inputValue
+        this.contacts[0].messages.push({message: newChat})
+        this.inputValue= ''
+      },
 
 
 
