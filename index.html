@@ -71,7 +71,7 @@
           <section class="aside-content">
 
             <!--profilo singolo della persona-->
-            <div v-for="(contact,index) in contacts" class="contact-profile d-flex gap-2">
+            <div v-for="(contact,index) in contacts" @click="showChat()" :class="contact.visibile === true ? 'active' : '' " class="contact-profile d-flex gap-2">
               
               <div class="profile-img">
                 <img class="round-image" :src="contact.avatar" alt="">
@@ -107,7 +107,7 @@
               </div>
 
               <div class="profile-spec">
-                <h3>Elon</h3>
+                <h3>Marco</h3>
                 <p>Ultimo accesso oggi alle 12:00</p>
               </div>
             </div>
@@ -128,34 +128,30 @@
           </section>
 
 
-          <!--content-->
+          <!--content------------------------------------------------------>
           <section class="main-content">
 
-            <section class="chat-section mt-5">
+            <section class="chat-section mt-5 px-5">
 
-              <!--chat mia-->
-              <div class="row m-0 justify-content-end">
-  
-                <div class="col-5">
-                  <div class="chat-cloud2">
-                    <p>ciao</p>
-                    <p class="msg-time2">15:30</p>
-                  </div>
-                </div>
-  
-              </div>
-  
-              <!--chat contatto-->
-              <div class="row m-0">
-  
-                <div class="col-5">
-                  <div class="chat-cloud">
-                    <p>ciao</p>
-                    <p class="msg-time">15:30</p>
-                  </div>
-                </div>
-  
-              </div>
+              <ul class="d-flex flex-column align-items-end p-0">
+
+                <li class="chat-proto sent">
+                  ciao
+                  <span class="msg-time">15:30</span>
+                </li>
+
+                <li class="chat-proto received">
+                  ciao come stai?
+                  <span class="msg-time">15:30</span>
+                </li>
+
+                <li class="chat-proto sent">
+                  molto bene grazie!
+                  <span class="msg-time">15:30</span>
+                </li>
+
+              </ul>
+
 
             </section>
 

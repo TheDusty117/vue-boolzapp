@@ -75,11 +75,25 @@ const { createApp } = Vue
           
         ]
 
-
-
-
-
-
       }
+    },
+
+    methods:{
+
+      showChat(){
+        if(this.contacts.visible === true){
+          this.contacts.visible = false
+        } 
+      }
+
+
+
+
+
+
     }
+
+
+
+
   }).mount('#app')
