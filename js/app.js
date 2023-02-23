@@ -75,7 +75,7 @@ const { createApp } = Vue
           
         ],
 
-        currentContact: 0,
+        currentIndexContact: 0,
         
 
       }
@@ -83,12 +83,10 @@ const { createApp } = Vue
 
     methods:{
 
-      // showChat(){
-      //   if(this.contact.visible === true){
-      //     this.contact.visible = false
-      //   } 
-      // }
-      
+      setCurrentContact(current){
+        this.currentIndexContact = current
+      }
+     
 
 
 
