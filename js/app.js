@@ -111,7 +111,10 @@ const { createApp } = Vue
 
     computed:{
 
-      
+      // 
+      activeContact(){
+        return this.contacts[this.currentIndexContact]
+      },
 
     },
 
