@@ -101,9 +101,11 @@ const DateTime = luxon.DateTime
      
       //aggiunge una chat di stringa vuota che prendo da value, ovvero quella che scrivo io
       addChat(){
+        const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
         const newChat = this.inputValue
-        this.contacts[this.currentIndexContact].messages.push({message: newChat})
+        this.contacts[this.currentIndexContact].messages.push({message: newChat , date: this.takeHourFormat(mydate)})
         this.inputValue= ''
+        console.log('ciao', this.takeHourFormat(mydate))
         setTimeout(this.addContactChat,2000)
       },
 
@@ -115,8 +117,9 @@ const DateTime = luxon.DateTime
       //inoltra automaticamente dopo aver fatto addChat
 
       addContactChat(){
+        const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
         const newResponse = this.responseValue
-        this.contacts[this.currentIndexContact].messages.push({message: newResponse, status: 'received'})
+        this.contacts[this.currentIndexContact].messages.push({message: newResponse, status: 'received' , date: this.takeHourFormat(mydate)})
         this.responseValue= 'ok!'
       },
 
