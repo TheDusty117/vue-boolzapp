@@ -108,13 +108,17 @@ const { createApp } = Vue
 
     },
 
-
+    //creano delle funzioni che possiamo leggere compe proprieta' {{computed.lenght ecc}} senza dover invocare la funzione stessa.
     computed:{
 
       // 
       activeContact(){
         return this.contacts[this.currentIndexContact]
       },
+
+      numberOfContacts(){
+        return this.contacts.lenght
+      }
 
     },
 
