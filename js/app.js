@@ -103,9 +103,9 @@ const DateTime = luxon.DateTime
       addChat(){
         const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
         const newChat = this.inputValue
-        this.contacts[this.currentIndexContact].messages.push({message: newChat , date: this.takeHourFormat(mydate)})
+        this.contacts[this.currentIndexContact].messages.push({message: newChat , date: mydate})
         this.inputValue= ''
-        console.log('ciao', this.takeHourFormat(mydate))
+        console.log('ciao', mydate)
         setTimeout(this.addContactChat,2000)
       },
 
@@ -119,7 +119,7 @@ const DateTime = luxon.DateTime
       addContactChat(){
         const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
         const newResponse = this.responseValue
-        this.contacts[this.currentIndexContact].messages.push({message: newResponse, status: 'received' , date: this.takeHourFormat(mydate)})
+        this.contacts[this.currentIndexContact].messages.push({message: newResponse, status: 'received' , date: mydate})
         this.responseValue= 'ok!'
       },
 
