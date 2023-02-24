@@ -82,27 +82,41 @@ const { createApp } = Vue
         //preso con v-bind nell'input su html
         inputValue: '',
 
-        
+        responseValue: 'ok!',
 
       }
     },
 
     methods:{
 
+      //imposta l'indice corrente 
       setCurrentContact(current){
         this.currentIndexContact = current
       },  
-
-      
      
+      //aggiunge una chat di stringa vuota che prendo da value, ovvero quella che scrivo io
       addChat(){
         const newChat = this.inputValue
         this.contacts[this.currentIndexContact].messages.push({message: newChat})
         this.inputValue= ''
       },
 
+      //ritorna la lunghezza di array contacts
       getContactsLenght(){
         return this.contacts.length
+      },
+
+      //inoltra automaticamente dopo aver fatto addChat
+
+      addContactChat(){
+        const newResponse = this.responseValue
+        this.contacts[this.currentIndexContact].messages.push({message: newResponse})
+        this.responseValue= 'ok!'
+      },
+
+      //risposta automatica
+      mounted(){
+        this.autoplay = setInterval(this.addContactChat, 3000)
       },
 
 
@@ -150,33 +164,73 @@ const { createApp } = Vue
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ESEMPI LUXON PER EVENTUALE BONUS!------------------------------
 // const { DateTime } = luxon
-const DateTime = luxon.DateTime
-
-const now= DateTime.now()
-console.log(now)
 
 
-const date = DateTime.fromObject({
-  year: 1990, 
-  month: 10, 
-  day: 24, 
-  hour: 14, 
-  minutes: 31, 
-  seconds: 56})
-console.log(date)
+// const DateTime = luxon.DateTime
 
-//24-10-1990
+// const now= DateTime.now()
+// console.log(now)
 
-const formattedDate = date.toFormat('dd/LL/yyyy')
-console.log(formattedDate)
+// //====================================================
 
-//======================================================================
+// const date = DateTime.fromObject({
+//   year: 1990, 
+//   month: 10, 
+//   day: 24, 
+//   hour: 14, 
+//   minutes: 31, 
+//   seconds: 56})
+// console.log(date)
 
-//parsing di una data che riceviamo in un certo fromato
-//vogliamo ottenere un certo oggett dal formato ricevuto
-const dateToParse = '10/01/2020 15:30:55' // dd/LL/yyyy HH:mm:ss
+// //24-10-1990=============================================
 
-const parsedDate = DateTime.fromFormat(dateToParse, 'dd/LL/yyyy HH:mm:ss')
-console.log(parsedDate.toFormat('dd/LL/yyyy'))
+// const formattedDate = date.toFormat('dd/LL/yyyy')
+// console.log(formattedDate)
+
+// //======================================================================
+
+// //parsing di una data che riceviamo in un certo fromato
+// //vogliamo ottenere un certo oggett dal formato ricevuto
+// const dateToParse = '10/01/2020 15:30:55' // dd/LL/yyyy HH:mm:ss
+
+// const parsedDate = DateTime.fromFormat(dateToParse, 'dd/LL/yyyy HH:mm:ss')
+// console.log(parsedDate.toFormat('dd/LL/yyyy'))

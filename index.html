@@ -151,6 +151,8 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
                   {{messages.message}}
                   <span class="msg-time">15:30</span>
                 </li>
+                
+                
 
                 <!-- <li class="chat-proto received">
                   {{contacts[currentContact].messages[2].message}}
@@ -176,7 +178,12 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
                 <i class="fa-regular fa-face-smile"></i>
               </div>
               <div class="col-10">
-                <input v-model="inputValue" @keyup.enter="addChat()" type="text" class="message-writer form-control" placeholder="Scrivi un messaggio">
+                <input v-model="inputValue" 
+                @keyup.enter="addChat()"
+                v-on:keyup.enter="mounted()"
+                 type="text" 
+                 class="message-writer form-control" 
+                 placeholder="Scrivi un messaggio">
               </div>
               <div class="col-1">
                 <i class="fa-solid fa-microphone"></i>
