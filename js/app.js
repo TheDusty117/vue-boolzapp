@@ -140,7 +140,43 @@ const { createApp } = Vue
 
   }).mount('#app')
 
+
+
+
+
+
+
+
+
+
+
+// ESEMPI LUXON PER EVENTUALE BONUS!------------------------------
 // const { DateTime } = luxon
 const DateTime = luxon.DateTime
 
+const now= DateTime.now()
+console.log(now)
 
+
+const date = DateTime.fromObject({
+  year: 1990, 
+  month: 10, 
+  day: 24, 
+  hour: 14, 
+  minutes: 31, 
+  seconds: 56})
+console.log(date)
+
+//24-10-1990
+
+const formattedDate = date.toFormat('dd/LL/yyyy')
+console.log(formattedDate)
+
+//======================================================================
+
+//parsing di una data che riceviamo in un certo fromato
+//vogliamo ottenere un certo oggett dal formato ricevuto
+const dateToParse = '10/01/2020 15:30:55' // dd/LL/yyyy HH:mm:ss
+
+const parsedDate = DateTime.fromFormat(dateToParse, 'dd/LL/yyyy HH:mm:ss')
+console.log(parsedDate.toFormat('dd/LL/yyyy'))
