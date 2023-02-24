@@ -118,7 +118,11 @@ const { createApp } = Vue
 
       numberOfContacts(){
         return this.contacts.lenght
-      }
+      },
+
+      //CREAMI! 
+      //proprieta che mi legge array di messaggi, e si aggiorna leggendo sempre l'ultimo messaggio!
+      latestMessage(){}
 
     },
 
