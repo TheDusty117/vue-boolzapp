@@ -1,5 +1,6 @@
 const { createApp } = Vue
 
+
   createApp({
     data() {
       return {
@@ -126,7 +127,20 @@ const { createApp } = Vue
 
     },
 
+    //funzioni simile ad event listener in grado di intercettare le modifiche di un certo dato
+    //tutte le volte che un valore viene modificato, verra' invocato il corrispettivo watcher.
+    watch:{
+
+
+
+    }
+
 
 
 
   }).mount('#app')
+
+// const { DateTime } = luxon
+const DateTime = luxon.DateTime
+
+
