@@ -147,7 +147,6 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
 
                 <li v-for="messages in contacts[currentIndexContact].messages"
                 :class="messages.status === 'received' ? 'received' : 'sent'  "
-                
                 class="chat-proto mt-3">
                   {{messages.message}}
                   <span class="msg-time">15:30</span>
@@ -181,7 +180,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
               <div class="col-10">
                 <input v-model="inputValue" 
                 @keyup.enter="addChat()"
-                v-on:keyup.enter="mounted()"
+                v-on:keyup.enter="autoSending()"
                  type="text" 
                  class="message-writer form-control" 
                  placeholder="Scrivi un messaggio">

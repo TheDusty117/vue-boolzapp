@@ -110,15 +110,15 @@ const { createApp } = Vue
 
       addContactChat(){
         const newResponse = this.responseValue
-        this.contacts[this.currentIndexContact].messages.push({message: newResponse})
+        this.contacts[this.currentIndexContact].messages.push({message: newResponse, status: 'received'})
         this.responseValue= 'ok!'
       },
 
       //risposta automatica
-      mounted(){
-        this.autoplay = setInterval(this.addContactChat, 3000)
+      autoSending(){
+        this.autoplay = setInterval(this.addContactChat, 1000)
+        // clearInterval(this.autoplay)
       },
-
 
 
     },
