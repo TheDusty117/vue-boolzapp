@@ -25,8 +25,8 @@ body {
 
 .aside-header{
   min-height: 70px;
-  border: 1px solid grey;
-  background-color: bisque;
+  /* border: 1px solid grey; */
+  background-color: #F3EEEA;
 }
 
 .my-profile>span{
@@ -120,8 +120,8 @@ body {
 /* HEADER DEL MAIN */
 .main-header{
   min-height: 70px;
-  border: 1px solid grey;
-  background-color: bisque;
+  border-left: 1px solid grey;
+  background-color: #F3EEEA;
 }
 
 
@@ -162,12 +162,12 @@ body {
 /* chat ricevuta */
 .received{
   margin-right: auto;
-  background-color: wheat;
+  background-color: white;
 }
 
 /* chat inviata */
 .sent{
-  background-color: greenyellow;
+  background-color: #D5F9BA;
 }
 
 
@@ -183,7 +183,7 @@ body {
 /* MAIN-FOOTER */
 
 .main-footer{
-  background-color: bisque;
+  background-color: #F3EEEA;
   height: 70px;
 }
 
