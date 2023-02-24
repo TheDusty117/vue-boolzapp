@@ -1,5 +1,6 @@
 const { createApp } = Vue
 
+const DateTime = luxon.DateTime
 
   createApp({
     data() {
@@ -83,8 +84,12 @@ const { createApp } = Vue
         inputValue: '',
 
         responseValue: 'ok!',
+        
 
       }
+
+      
+
     },
 
     methods:{
@@ -99,6 +104,7 @@ const { createApp } = Vue
         const newChat = this.inputValue
         this.contacts[this.currentIndexContact].messages.push({message: newChat})
         this.inputValue= ''
+        setTimeout(this.addContactChat,2000)
       },
 
       //ritorna la lunghezza di array contacts
@@ -115,13 +121,30 @@ const { createApp } = Vue
       },
 
       //risposta automatica
-      autoSending(){
-        this.autoplay = setInterval(this.addContactChat, 1000)
-        // clearInterval(this.autoplay)
-      },
+      // mounted(){
+      //   this.autoplay = setInterval(this.addContactChat, 2000)
+      //   // clearInterval(this.autoplay)
+      // },
 
+
+     // METODO CHE FORMATA DATA GIORNO E ORA IN ORE E BASTA 
+     
+     takeHourFormat(stringadate){
+      
+       const dateToParse = stringadate
+       const parsedDate = DateTime.fromFormat(dateToParse, 'dd/LL/yyyy HH:mm:ss')
+       return parsedDate.toFormat( 'HH:mm:ss')
+     },
 
     },
+
+
+
+
+
+
+
+
 
     //creano delle funzioni che possiamo leggere compe proprieta' {{computed.lenght ecc}} senza dover invocare la funzione stessa.
     computed:{
@@ -137,7 +160,9 @@ const { createApp } = Vue
 
       //CREAMI! 
       //proprieta che mi legge array di messaggi, e si aggiorna leggendo sempre l'ultimo messaggio!
-      latestMessage(){}
+      latestMessage(){
+        
+      }
 
     },
 
@@ -147,10 +172,8 @@ const { createApp } = Vue
 
 
 
-    }
-
-
-
+    },
+    
 
   }).mount('#app')
 
@@ -159,6 +182,39 @@ const { createApp } = Vue
 
 
 
+  // ESEMPI LUXON PER EVENTUALE BONUS!------------------------------
+  // const { DateTime } = luxon
+  
+  
+  // const DateTime = luxon.DateTime
+  
+  // const now= DateTime.now()
+  // console.log(now)
+  
+  // //====================================================
+  
+  // const date = DateTime.fromObject({
+  //   year: 1990, 
+  //   month: 10, 
+  //   day: 24, 
+  //   hour: 14, 
+  //   minutes: 31, 
+  //   seconds: 56})
+  // console.log(date)
+  
+  // //24-10-1990=============================================
+  
+  // const formattedDate = date.toFormat('dd/LL/yyyy')
+  // console.log(formattedDate)
+  
+  // //======================================================================
+  
+  // //parsing di una data che riceviamo in un certo fromato
+  // //vogliamo ottenere un certo oggett dal formato ricevuto
+  // const dateToParse = '10/01/2020 15:30:55' // dd/LL/yyyy HH:mm:ss
+  
+  // const parsedDate = DateTime.fromFormat(dateToParse, 'dd/LL/yyyy HH:mm:ss')
+  // console.log(parsedDate.toFormat('dd/LL/yyyy'))
 
 
 
@@ -191,46 +247,3 @@ const { createApp } = Vue
 
 
 
-
-
-
-
-
-
-
-
-
-
-// ESEMPI LUXON PER EVENTUALE BONUS!------------------------------
-// const { DateTime } = luxon
-
-
-// const DateTime = luxon.DateTime
-
-// const now= DateTime.now()
-// console.log(now)
-
-// //====================================================
-
-// const date = DateTime.fromObject({
-//   year: 1990, 
-//   month: 10, 
-//   day: 24, 
-//   hour: 14, 
-//   minutes: 31, 
-//   seconds: 56})
-// console.log(date)
-
-// //24-10-1990=============================================
-
-// const formattedDate = date.toFormat('dd/LL/yyyy')
-// console.log(formattedDate)
-
-// //======================================================================
-
-// //parsing di una data che riceviamo in un certo fromato
-// //vogliamo ottenere un certo oggett dal formato ricevuto
-// const dateToParse = '10/01/2020 15:30:55' // dd/LL/yyyy HH:mm:ss
-
-// const parsedDate = DateTime.fromFormat(dateToParse, 'dd/LL/yyyy HH:mm:ss')
-// console.log(parsedDate.toFormat('dd/LL/yyyy'))
