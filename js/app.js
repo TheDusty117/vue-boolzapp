@@ -90,13 +90,13 @@ const { createApp } = Vue
 
       setCurrentContact(current){
         this.currentIndexContact = current
-      },
+      },  
 
       
      
       addChat(){
         const newChat = this.inputValue
-        this.contacts[0].messages.push({message: newChat})
+        this.contacts[this.currentIndexContact].messages.push({message: newChat})
         this.inputValue= ''
       },
 
