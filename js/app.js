@@ -119,7 +119,7 @@ const DateTime = luxon.DateTime
       addContactChat(){
         const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
         const newResponse = this.responseValue
-        this.contacts[this.currentIndexContact].messages.push({message: newResponse, status: 'received' , date: mydate})
+        this.contacts[this.currentIndexContact].messages.push({message: newResponse, date: mydate, status: 'received'})
         this.responseValue= 'ok!'
       },
 
@@ -136,7 +136,7 @@ const DateTime = luxon.DateTime
       
        const dateToParse = stringadate
        const parsedDate = DateTime.fromFormat(dateToParse, 'dd/LL/yyyy HH:mm:ss')
-       return parsedDate.toFormat( 'HH:mm:ss')
+       return parsedDate.toFormat( 'HH:mm')
      },
 
     },
