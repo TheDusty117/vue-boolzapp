@@ -32,13 +32,13 @@
             </div>
 
             <div class="settings pe-2">
-              <button>
+              <button class="button-options">
                 <i class="fa-solid fa-circle-notch"></i>
               </button>
-              <button>
+              <button class="button-options">
                 <i class="fa-solid fa-message"></i>
               </button>
-              <button>
+              <button class="button-options">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </button>
             </div>
@@ -64,6 +64,10 @@
               </div>
               <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="" aria-describedby="basic-addon1">
             </div>
+
+            <div class="contacts-list-n">
+              <p>numero contatti: {{getContactsLenght()}} </p>
+            </div>
             
           </section>
 
@@ -71,7 +75,10 @@
           <section class="aside-content">
 
             <!--profilo singolo della persona-->
-            <div v-for="(contact,index) in contacts" @click="setCurrentContact(index)" class="contact-profile d-flex gap-2">
+            <div v-for="(contact,index) in contacts"
+             :class="index === currentIndexContact ? 'active' :  '' "
+             @click="setCurrentContact(index)" 
+             class="contact-profile d-flex gap-2">
               
               <div class="profile-img">
                 <img class="round-image" :src="contact.avatar" alt="">
@@ -115,13 +122,13 @@
 
 
             <div class="settings pe-2">
-              <button>
+              <button class="button-options">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-              <button>
+              <button class="button-options">
                 <i class="fa-solid fa-paperclip"></i>
               </button>
-              <button>
+              <button class="button-options">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </button>
             </div>
@@ -185,9 +192,6 @@
 
 
   </section>
-
-
-
 
 
 

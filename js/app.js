@@ -100,11 +100,20 @@ const { createApp } = Vue
         this.inputValue= ''
       },
 
+      getContactsLenght(){
+        return this.contacts.length
+      },
 
 
 
+    },
 
-    }
+
+    computed:{
+
+      
+
+    },
 
 
 
