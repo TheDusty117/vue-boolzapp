@@ -6,6 +6,7 @@ const DateTime = luxon.DateTime
     data() {
       return {
         
+        
         contacts: [
 
           {
@@ -85,6 +86,8 @@ const DateTime = luxon.DateTime
 
         responseValue: 'ok!',
         
+        search: '',
+
 
       }
 
@@ -101,7 +104,8 @@ const DateTime = luxon.DateTime
      
       //aggiunge una chat di stringa vuota che prendo da value, ovvero quella che scrivo io
       addChat(){
-        const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
+        const mydate = DateTime.now().toFormat('dd/LL/yyyy HH:mm:ss');
+
         const newChat = this.inputValue
         this.contacts[this.currentIndexContact].messages.push({message: newChat , date: mydate})
         this.inputValue= ''
@@ -117,10 +121,17 @@ const DateTime = luxon.DateTime
       //inoltra automaticamente dopo aver fatto addChat
 
       addContactChat(){
-        const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
+        // const mydate = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
+        const mydate = DateTime.now().toFormat('dd/LL/yyyy HH:mm:ss');
         const newResponse = this.responseValue
         this.contacts[this.currentIndexContact].messages.push({message: newResponse, date: mydate, status: 'received'})
         this.responseValue= 'ok!'
+      },
+
+      functResearch(){
+        console.log(this.searchValue)
+        
+
       },
 
       //risposta automatica
@@ -141,8 +152,9 @@ const DateTime = luxon.DateTime
 
     },
 
+    
 
-
+  
 
 
 
@@ -152,6 +164,14 @@ const DateTime = luxon.DateTime
     //creano delle funzioni che possiamo leggere compe proprieta' {{computed.lenght ecc}} senza dover invocare la funzione stessa.
     computed:{
 
+      // filteredList() {
+      //   return this.contacts.filter(contact => {
+      //     contact.name.toLowerCase().includes(this.search.toLowerCase())
+      //   }
+        
+      //   )
+        
+      // },
       // 
       activeContact(){
         return this.contacts[this.currentIndexContact]
@@ -175,8 +195,7 @@ const DateTime = luxon.DateTime
 
 
 
-    },
-    
+    }
 
   }).mount('#app')
 

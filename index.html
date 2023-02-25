@@ -65,7 +65,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
-              <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="" aria-describedby="basic-addon1">
+              <input v-model="search" @change="" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="" aria-describedby="basic-addon1">
             </div>
 
             <div class="contacts-list-n">
@@ -79,6 +79,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
 
             <!--profilo singolo della persona-->
             <div v-for="(contact,index) in contacts"
+             :key="contact.name"
              :class="index === currentIndexContact ? 'active' :  '' "
              @click="setCurrentContact(index)" 
              class="contact-profile d-flex gap-2">
