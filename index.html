@@ -17,7 +17,8 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
   <title>BOOLZAP</title>
 </head>
 
-<body>
+<body id="grad3">
+  
 
   <section id="app">
     
@@ -65,11 +66,15 @@ https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
-              <input v-model="search" @change="" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="" aria-describedby="basic-addon1">
+              <input v-model="search" 
+              @change="" 
+              type="text" 
+              class="form-control" 
+              placeholder="Cerca o inizia una nuova chat">
             </div>
 
             <div class="contacts-list-n">
-              <p>numero contatti: {{getContactsLenght()}} </p>
+              <p>ricerca: {{ search }} </p>
             </div>
             
           </section>
